@@ -1,0 +1,82 @@
+<!-- GPT33 Interactive In-App Welcome Broadcast Banner -->
+<div class="card welcome-card" 
+     style="position: relative; 
+            padding: 25px; 
+            overflow: hidden; 
+            border: 1px solid rgba(5, 150, 105, 0.25); 
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.08) 0%, rgba(16, 185, 129, 0.02) 100%), var(--bg-card); 
+            box-shadow: 0 15px 30px rgba(5, 150, 105, 0.05); 
+            margin-bottom: 25px;">
+    
+    <!-- Decorative background glow -->
+    <div style="position: absolute; 
+                top: -50px; 
+                right: -50px; 
+                width: 150px; 
+                height: 150px; 
+                background: var(--primary); 
+                filter: blur(80px); 
+                opacity: 0.15; 
+                pointer-events: none;"></div>
+
+    <!-- Top Badge / Info Chip -->
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-block; width: 8px; height: 8px; background-color: var(--accent); border-radius: 50%; animation: pulse 2s infinite;"></span>
+            <span style="font-size: 0.65rem; font-weight: 800; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase;">
+                INTELLIGENCE LAYER ACTIVE
+            </span>
+        </div>
+        <div style="font-size: 0.65rem; color: var(--text-muted); font-weight: 600;">
+            Node ID: #GPT-33-01
+        </div>
+    </div>
+
+    <!-- Greeting & Description -->
+    <h3 style="font-size: 1.25rem; font-weight: 800; margin: 0 0 10px 0; color: var(--text-main); letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px;">
+        Welcome to GPT33 Networks <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent); font-size: 1rem;"></i>
+    </h3>
+    <p style="font-size: 0.82rem; line-height: 1.5; color: var(--text-muted); margin: 0 0 20px 0;">
+        Your secure link to our high-throughput AI computing cluster has been successfully authorized. Start dedicating computing power to earn automated hourly yield directly to your earnings balance.
+    </p>
+
+    <!-- Key Actions Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 22px;">
+        <!-- Step 1: Deposit -->
+        <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--glass-border); padding: 12px; border-radius: 10px;">
+            <div style="color: var(--primary); font-size: 1rem; margin-bottom: 6px;">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div style="font-weight: 700; font-size: 0.8rem; color: var(--text-main); margin-bottom: 2px;">1. Load Capital</div>
+            <div style="font-size: 0.68rem; color: var(--text-muted);">Add digital assets to your balance.</div>
+        </div>
+
+        <!-- Step 2: Invest -->
+        <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--glass-border); padding: 12px; border-radius: 10px;">
+            <div style="color: var(--accent); font-size: 1rem; margin-bottom: 6px;">
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div style="font-weight: 700; font-size: 0.8rem; color: var(--text-main); margin-bottom: 2px;">2. Deploy Nodes</div>
+            <div style="font-size: 0.68rem; color: var(--text-muted);">Activate high-yield compute rates.</div>
+        </div>
+    </div>
+
+    <!-- Dynamic call to action button -->
+    <a href="invest" data-link class="btn" 
+       style="background: var(--gradient); 
+              padding: 14px; 
+              font-size: 0.88rem; 
+              font-weight: 700; 
+              display: flex; 
+              align-items: center; 
+              justify-content: center; 
+              gap: 8px; 
+              border-radius: var(--radius-chamfer); 
+              text-decoration: none; 
+              color: white; 
+              box-shadow: 0 8px 25px var(--primary-glow); 
+              transition: var(--transition);">
+        <span>INITIATE AI POWER STAKING</span>
+        <i class="fa-solid fa-arrow-right-long" style="font-size: 0.8rem;"></i>
+    </a>
+</div>

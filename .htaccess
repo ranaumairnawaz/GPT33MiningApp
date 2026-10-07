@@ -1,0 +1,27 @@
+# Deny access to sensitive files
+<FilesMatch "^\.env|.*\.sql|.*\.log|composer\.json|composer\.lock">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+RewriteEngine On
+RewriteBase /
+
+# Route Admin Requests
+RewriteCond %{REQUEST_URI} ^/admin [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^admin/?(.*)$ admin/index.php?route=$1 [QSA,L]
+
+# Route Frontend Requests
+RewriteCond %{REQUEST_URI} !^/admin [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+
+
